@@ -113,10 +113,9 @@ console.log(JSON.parse(JSON.stringify(userA)));
 ❌ TypeError: **Converting circular structure to JSON**
 
 ---
-layout: image
-image: /imgs/adam-bob.png
-backgroundSize: contain
----
+
+<img src="./images/adam-bob.png" style="width: 100%;" />
+
 ---
 
 ## → Identity problem / shared references
@@ -240,10 +239,9 @@ console.log(decData.createdAt instanceof Date); // true
 ```
 
 ---
-layout: image
-image: /imgs/adam-bob.png
-backgroundSize: contain
----
+
+<img src="./images/adam-bob.png" style="width: 100%;" />
+
 ---
 
 #### → Demo: Circular structures
@@ -427,10 +425,22 @@ JSBT is my answer to that question.
 
 ## → Try it
 
-GitHub: https://github.com/cheprasov/ts-jsbt  
-  
-Playground: https://cheprasov.github.io/ts-jsbt-playground/  
-  
-NPM: @cheprasov/jsbt  
+<div style="display: flex; align-items: center; gap: 40px;">
 
-Linkedin: https://www.linkedin.com/in/alexandercheprasov/
+<div style="flex: 1;">
+
+**NPM:** @cheprasov/jsbt  
+
+**GitHub:** https://github.com/cheprasov/ts-jsbt  
+  
+**Playground:** https://cheprasov.github.io/ts-jsbt-playground/  
+
+**Linkedin:** https://www.linkedin.com/in/alexandercheprasov/
+
+</div>
+
+<div style="flex: 1; text-align: right;">
+  <img src="./images/qr-code.png" width="350" />
+</div>
+
+</div> 
