@@ -56,7 +56,7 @@ Until you deal with real JavaScript data
 
 Because it’s **not just trees**.
 
-It’s **graphs**
+It’s **graphs — with identity, references, and cycles**
 
 ---
 
@@ -65,7 +65,7 @@ It’s **graphs**
 **Most serialization formats assume data is a tree:**
 
 - nested objects
-- no cycles (object s don’t reference each other in loops)
+- no cycles (objects don’t reference each other in loops)
 - no shared references (no reuse of the same object)
 
 ---
@@ -94,7 +94,9 @@ console.log(JSON.parse(JSON.stringify(userA)));
 - cycles can exist (reference loops)
 
 **JSON → tree model**  
-**JavaScript → graph model**
+**JavaScript → graph model**  
+
+Same data, different model
 
 ---
 
@@ -213,6 +215,8 @@ So **JSBT is a binary format that treats JavaScript data as a graph.** Not as a 
 
 ## → Demo
 
+Let’s look at real JavaScript data
+
 ---
 
 #### → Demo: How to use JSBT
@@ -280,6 +284,7 @@ const decFamily = JSBT.decode(JSBT.encode(family));
 console.log(decFamily.parentA.child === decFamily.parentB.child); // true
 console.log(decFamily.parentA.child === decFamily.child); // true
 ```
+Same object. Same reference.
 ---
 
 #### → Demo: Class instances
@@ -362,7 +367,7 @@ JSBT - **0.074 MB**
 
 ---
 
-## → FAQ
+## → FAQ (1/2)
 
 **Why JS-only?**  
 → designed to preserve real JavaScript semantics  
@@ -374,7 +379,7 @@ JSBT - **0.074 MB**
 
 ---
 
-## → FAQ
+## → FAQ (2/2)
 
 **Versioning?**  
 → same as JSON  
@@ -419,7 +424,7 @@ that is simple, schema-less, and preserves real data?
 
 ...
 
-JSBT is my answer to that question.
+<div v-click><b>JSBT is my answer to that question.</b></div>
 
 ---
 
@@ -439,8 +444,9 @@ JSBT is my answer to that question.
 
 </div>
 
-<div style="flex: 1; text-align: right;">
+<div style="flex: 1; text-align: center;">
   <img src="./images/qr-code.png" width="350" />
+  Scan to explore
 </div>
 
 </div> 
