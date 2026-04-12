@@ -7,6 +7,14 @@ comark: true
 canvasWidth: 800
 monacoRunAdditionalDeps:
   - "@cheprasov/jsbt"
+layout: quote
+---
+
+<img src="./images/cover.jpg" style="width: 100%;" />
+
+---
+layout: quote
+class: text-center
 ---
 
 # **JSBT**
@@ -60,16 +68,6 @@ It’s **graphs — with identity, references, and cycles**
 
 ---
 
-## → The problem
-
-**Most serialization formats assume data is a tree:**
-
-- nested objects
-- no cycles (objects don’t reference each other in loops)
-- no shared references (no reuse of the same object)
-
----
-
 ## → Simple example (tree)  
   
 ```js {monaco-run}
@@ -82,6 +80,16 @@ console.log(JSON.parse(JSON.stringify(userA)));
 ```
 
 ✅ Works
+
+---
+
+## → The problem
+
+**Most serialization formats assume data is a tree:**
+
+- nested objects
+- no cycles (objects don’t reference each other in loops)
+- no shared references (no reuse of the same object)
 
 ---
 
@@ -100,6 +108,10 @@ Same data, different model
 
 ---
 
+<img src="./images/adam-bob.png" style="width: 100%;" />
+
+---
+
 ## → Now it's a graph
 
 ```js {monaco-run}
@@ -113,10 +125,6 @@ console.log(JSON.parse(JSON.stringify(userA)));
 ```
 
 ❌ TypeError: **Converting circular structure to JSON**
-
----
-
-<img src="./images/adam-bob.png" style="width: 100%;" />
 
 ---
 
