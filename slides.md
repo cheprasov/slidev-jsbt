@@ -93,21 +93,6 @@ console.log(JSON.parse(JSON.stringify(userA)));
 
 ---
 
-**But JavaScript works differently**
-
-## → JS data is an object graph
-
-- objects can reference each other
-- the same object can be reused in multiple places
-- cycles can exist (reference loops)
-
-**JSON → tree model**  
-**JavaScript → graph model**  
-
-Same data, different model
-
----
-
 <img src="./images/adam-bob.png" style="width: 100%;" />
 
 ---
@@ -174,6 +159,21 @@ console.log(JSON.parse(JSON.stringify(family)));
 parentA.child !== parentB.child
 parentA.child !== child
 ```
+
+---
+
+**But JavaScript works differently**
+
+## → JS data is an object graph
+
+- objects can reference each other
+- the same object can be reused in multiple places
+- cycles can exist (reference loops)
+
+**JSON → tree model**  
+**JavaScript → graph model**  
+
+Same data, different model
 
 ---
 
